@@ -5,4 +5,9 @@
     <select id="test" resultType="map">
         select * from log limit 1;
     </select>
+
+
+    <insert id="saveFileInfo">
+        insert  into project_file (file_name,file_type,upload_date,user) values(#{fileName},#{fileType},NOW(),#{user})
+    </insert>
 </mapper>

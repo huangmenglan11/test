@@ -41,6 +41,9 @@ public class TestController {
             }
             //将上传文件保存到一个目标文件当中
             file.transferTo(new File(path + File.separator + filename));
+
+            projectFileService.saveFileInfo(filename,1,"admin");
+
             return "success";
         } else {
             return "error";
